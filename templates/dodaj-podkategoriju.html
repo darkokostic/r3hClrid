@@ -1,0 +1,38 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+
+<h3 style="margin-left: 210px; margin-top:60px;">Dodaj podkategoriju</h3>
+
+
+<!--begin HTML Form-->
+<form class="form-horizontal" role="form" method="post" action=" ">
+<div class="form-group">
+<label for="name" class="col-sm-3 control-label"><span class="required">*</span> Naziv:</label>
+<div class="col-sm-9">
+<input type="text" class="form-control" ng-model="name" placeholder="Naziv">
+</div>
+</div>
+
+<div class="form-group">
+<label for="name" class="col-sm-3 control-label"><span class="required">*</span> Slika:</label>
+<div class="col-sm-9">
+<input type="file" ref="getImage" id="post-file" class="form-control" ng-model="image">
+</div>
+</div>
+
+<div class="form-group">
+<label for="name" class="col-sm-3 control-label"><span class="required">*</span> Kategorija:</label>
+<div class="col-sm-9">
+    <select class="ion-input-select" ng-model="$parent.selectedCategory" ng-options="kategorija.name for kategorija in kategorije">
+    </select></div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+<button type="submit" id="submit" name="submit" ng-click="add()" class="btn-lg btn-success btn-block">DODAJ</button>
+
+</div>
+</div>
+<!--end Form--></form>
+<!--end col block--></div>
+<div class="col-md-2"></div>

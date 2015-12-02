@@ -1,0 +1,25 @@
+<div class="col-md-2"></div>
+<div class="col-md-10 center-block">
+ <table style="margin-top: 50px;" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Naziv Podkategorije</th>
+            <th>Slika</th>
+            <th>Kategorija</th>
+            <th><button class="btn btn-primary" ng-click="goTo()">Dodaj podkategoriju</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="podkategorija in podkategorije">
+            <td class="text-danger">{{podkategorija.name}}</td>
+            <td><img style="width: 70px; height: 70px;" src="{{podkategorija.image.url}}"></td>
+            <td>{{podkategorija.kategorijaName}}</td>
+            <td>
+                <button class="btn btn-md btn-primary btn-block" ng-click="edit(podkategorija.objectId)">Izmeni</button>
+                <button class="btn btn-md btn-danger btn-block" ng-click="delete(podkategorija.objectId)">Obriši</button>
+            </td>
+        </tr>
+        <tr>
+    </tbody>
+</table>
+</div>

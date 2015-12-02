@@ -1,0 +1,31 @@
+<div class="col-md-2"></div>
+<div class="col-md-12 center-block">
+ <table style="margin-top: 50px;" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Naziv Oglasa</th>
+            <th>Adresa</th>
+            <th>Radno vreme</th>
+            <th>Telefon</th>
+            <th>Opis</th>
+            <th>Slika Oglasa</th>
+            <th><button class="btn btn-primary" ng-click="goTo()">Dodaj oglas</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="oglas in oglasi">
+            <td class="text-danger">{{oglas.name}}</td>
+            <td>{{oglas.address}}</td>
+            <td>{{oglas.workingTime}}</td>
+            <td>{{oglas.tel}}</td>
+            <td>{{oglas.opis}}</td>
+            <td><img style="width: 100px;" src="{{oglas.image.url}}"></td>
+            <td>
+                <button class="btn btn-md btn-primary btn-block" ng-click="edit(oglas.objectId)">Izmeni</button>
+                <button class="btn btn-md btn-danger btn-block" ng-click="delete(oglas.objectId)">Obriši</button>
+            </td>
+        </tr>
+        <tr>
+    </tbody>
+</table>
+</div>

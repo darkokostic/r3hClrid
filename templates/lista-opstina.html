@@ -1,0 +1,21 @@
+<div class="col-md-2"></div>
+<div class="col-md-5 center-block">
+ <table style="margin-top: 50px;" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Naziv Opštine</th>
+            <th><button class="btn btn-primary" ng-click="goTo()">Dodaj Opštinu</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="opstina in opstine">
+            <td class="text-danger">{{opstina.opstinaName}}</td>
+            <td>
+                <button class="btn btn-md btn-primary btn-block" ng-click="edit(opstina.objectId)">Izmeni</button>
+                <button class="btn btn-md btn-danger btn-block" ng-click="delete(opstina.objectId)">Obriši</button>
+            </td>
+        </tr>
+        <tr>
+    </tbody>
+</table>
+</div>
